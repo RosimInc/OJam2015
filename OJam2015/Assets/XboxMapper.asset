@@ -11,4 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b8bff40efade6489d2bc0d9457cd25, type: 3}
   m_Name: XboxMapper
   m_EditorClassIdentifier: 
-  Contexts: []
+  Contexts:
+  - name: Gameplay
+    ButtonActions: []
+    AxisRanges:
+    - name: MoveHorizontalVampire
+      Axis: 0
+    ButtonStates: []
