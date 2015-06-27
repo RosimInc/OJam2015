@@ -54,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.7000008, y: -3.0999999, z: -1.29999995}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 25.7000008, y: -5.46999979, z: -1.29999995}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 445326}
   m_Father: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   Duration: .5
   DestroyAfter: 1
   HUDViewportPosition: {x: .100000001, y: .5}
-  TargetScale: {x: .5, y: .5, z: .5}
+  TargetScale: {x: .25, y: .25, z: .25}
 --- !u!114 &11470584
 MonoBehaviour:
   m_ObjectHideFlags: 1

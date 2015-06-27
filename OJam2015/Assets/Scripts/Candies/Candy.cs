@@ -15,6 +15,8 @@ public abstract class Candy : MonoBehaviour
     {
         if (other.tag == "Vampire")
 	    {
+            VampireAnimator animator = other.GetComponent<VampireAnimator>();
+            animator.Smile();
             CollectCandy();
 	    }
     }

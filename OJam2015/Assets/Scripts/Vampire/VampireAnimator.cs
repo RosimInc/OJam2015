@@ -4,11 +4,14 @@ using System.Collections;
 public class VampireAnimator : MonoBehaviour
 {
     public Transform Body;
+    public Transform Eyebrows;
     public Transform Eyes;
     public Transform ArmLeft;
     public Transform ArmRight;
     public Transform LegLeft;
     public Transform LegRight;
+    public GameObject NormalMouth;
+    public GameObject HappyMouth;
 
     private const float SLOPE_VALUE = 10f;
     private const float LEGS_ROTATION_MAX = 28f;
@@ -21,6 +24,7 @@ public class VampireAnimator : MonoBehaviour
     private float armLeftAngle;
     private float armRightAngle;
     private float idleCounter = 0f;
+    private bool _isSmiling = false;
 
     public void Move(float value)
     {
@@ -28,6 +32,36 @@ public class VampireAnimator : MonoBehaviour
         MoveLegs(value);
         MoveArms(value);
         MoveEyes(value);
+    }
+
+    public void Smile()
+    {
+        if (!_isSmiling)
+        {
+            StartCoroutine(SmileCoroutine());
+        }
+    }
+
+    private IEnumerator SmileCoroutine()
+    {
+        _isSmiling = true;
+
+        float previousEyesYValue = Eyes.localPosition.y;
+        float previousEyebrowsYValue = Eyebrows.localPosition.y;
+
+        Eyes.localPosition = new Vector3(0f, 1.47f, 0f);
+        Eyebrows.localPosition = new Vector3(0f, 1.73f, 0f);
+        NormalMouth.SetActive(false);
+        HappyMouth.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        Eyes.localPosition = new Vector3(0f, previousEyesYValue, 0f);
+        Eyebrows.localPosition = new Vector3(0f, previousEyebrowsYValue, 0f);
+        NormalMouth.SetActive(true);
+        HappyMouth.SetActive(false);
+
+        _isSmiling = false;
     }
 
     private void MoveIdle(float value)
@@ -75,6 +109,8 @@ public class VampireAnimator : MonoBehaviour
 
     private void MoveEyes(float value)
     {
+        if (_isSmiling) return;
+
         float newX = Mathf.Lerp(Eyes.localPosition.x, EYES_OFFSET * value, Mathf.SmoothStep(0f, 1f, Time.deltaTime * SLOPE_VALUE));
 
         Eyes.localPosition = new Vector3(newX, Eyes.localPosition.y, Eyes.localPosition.z);
