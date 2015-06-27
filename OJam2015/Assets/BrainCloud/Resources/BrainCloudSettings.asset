@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: BrainCloudSettings
   m_EditorClassIdentifier: 
   m_serverURL: https://sharedprod.braincloudservers.com
-  m_secretKey: 
-  m_gameId: 
+  m_secretKey: 4442388c-43aa-497f-bbd6-24438e06c7c0
+  m_gameId: 10234
   m_gameVersion: 1.0
