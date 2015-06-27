@@ -394,6 +394,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21286014, guid: b1a1cc14e60e492439cd450d70f792f9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ea1dc292451c4b4e8afb605bc37ff62, type: 2}
+    - target: {fileID: 21280726, guid: b1a1cc14e60e492439cd450d70f792f9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ea1dc292451c4b4e8afb605bc37ff62, type: 2}
+    - target: {fileID: 21256572, guid: b1a1cc14e60e492439cd450d70f792f9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ea1dc292451c4b4e8afb605bc37ff62, type: 2}
+    - target: {fileID: 21277860, guid: b1a1cc14e60e492439cd450d70f792f9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ea1dc292451c4b4e8afb605bc37ff62, type: 2}
+    - target: {fileID: 21201142, guid: b1a1cc14e60e492439cd450d70f792f9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ea1dc292451c4b4e8afb605bc37ff62, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1a1cc14e60e492439cd450d70f792f9, type: 2}
   m_IsPrefabParent: 0
@@ -500,6 +520,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1549200341}
+  - 114: {fileID: 1549200342}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -519,6 +540,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1549200342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549200340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f6af3c08d16d74382a194f191c6d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 127714, guid: c8a7b75721dec8f45bb39acf013c74fa, type: 2}
 --- !u!1 &1754274250
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,8 +703,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batty: {fileID: 1187747056}
-  platform: {fileID: 127714, guid: c8a7b75721dec8f45bb39acf013c74fa, type: 2}
-  levelHolder: {fileID: 1549200340}
   minPos: {x: -10, y: -10}
   maxPos: {x: 150, y: 20}
 --- !u!1001 &1893048866
