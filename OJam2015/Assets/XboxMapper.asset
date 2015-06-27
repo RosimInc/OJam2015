@@ -16,7 +16,7 @@ MonoBehaviour:
     ButtonActions:
     - name: Start
       Button: 7
-    - name: Jump
+    - name: Action
       Button: 0
     AxisRanges:
     - name: MoveHorizontal
