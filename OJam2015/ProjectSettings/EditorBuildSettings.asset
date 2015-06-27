@@ -7,3 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/VampireScene.unity
+  - enabled: 1
+    path: Assets/Scenes/sophieScene.unity
+  - enabled: 1
+    path: Assets/Scenes/SRLightTest.unity
