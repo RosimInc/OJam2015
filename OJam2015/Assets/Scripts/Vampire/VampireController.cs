@@ -6,6 +6,10 @@ using InputHandler;
 [RequireComponent(typeof(Vampire))]
 public class VampireController : MonoBehaviour
 {
+    public enum PlayerIndex { Player1, Player2 };
+
+    public PlayerIndex player;
+
     private VampireAnimator _vampireAnimator;
     private Vampire _vampire;
 
@@ -21,7 +25,7 @@ public class VampireController : MonoBehaviour
 	void Start ()
     {
         InputManager.Instance.PushActiveContext("Gameplay");
-        InputManager.Instance.AddCallback(0, HandleVampireActions);
+        InputManager.Instance.AddCallback((int)player, HandleVampireActions);
 	}
 
     private void HandleVampireActions(MappedInput input)
