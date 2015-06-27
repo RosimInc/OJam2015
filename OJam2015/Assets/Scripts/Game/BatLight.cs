@@ -5,6 +5,8 @@ public class BatLight : MonoBehaviour {
 
 	public GameObject batty;
 	private Vector3 startPosDif;
+
+	//Making the light flicker
 	private float lightChangeTime = 0f;
 	private float initialRange;
 	private float initialIntensity;
@@ -16,6 +18,8 @@ public class BatLight : MonoBehaviour {
 	void Start () {
 		startPosDif = -batty.transform.position + this.transform.position;
 		spot = GetComponent<Light>();
+
+		//Obtaining initial data from the light
 		initialRange = spot.range;
 		initialIntensity = spot.intensity;
 		initialSpotAngle = spot.spotAngle;
