@@ -2,6 +2,7 @@
 using System.Collections;
 using InputHandler;
 
+[RequireComponent(typeof(BatAnimator))]
 public class BatController : MonoBehaviour {
 
     public float maxVelocity;
@@ -12,30 +13,60 @@ public class BatController : MonoBehaviour {
     public float minMovementRange;
     public float minVelocityRange;
 
-    private bool isRadarActive = false;
+    public bool isInInteractionRange;
+    public GameObject interactiveElement;
+
+    private Collider2D actionCollider;
+
+    private BatAnimator batAnimator; 
+
 
 	// Use this for initialization
 	void Start () {
+        batAnimator = GetComponent<BatAnimator>();
+        
         InputManager.Instance.PushActiveContext("Gameplay");
-        InputManager.Instance.AddCallback(0, HandleBatActions);
+        InputManager.Instance.AddCallback(1, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;
+
+        actionCollider = GetComponent<Collider2D>();
+
 	}
+
+
+    void OnTriggerEnter2D(Collider2D other) {
+
+        if( other.tag == "BatInteraction"){
+            isInInteractionRange = true;
+            interactiveElement = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.tag == "BatInteraction") {
+            isInInteractionRange = false;
+            interactiveElement = null;
+        }
+    }
 
     private void HandleBatActions(MappedInput input) {
 
-        Move(input);
-
+        Move(input);        
         
 
-
         if (input.Actions.Contains("Action")) {
+            
+            if (isInInteractionRange && interactiveElement != null) {
+                
+                interactiveElement.GetComponent<Switch>().Activate();
 
-
+                batAnimator.Shout();
+            }
 
         }
-
-
+        
+       
         
     }
 
@@ -92,7 +123,7 @@ public class BatController : MonoBehaviour {
             0f
         );
     }
-	
 
+   
 
 }
