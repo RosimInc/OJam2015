@@ -26,7 +26,7 @@ public class BatController : MonoBehaviour {
         batAnimator = GetComponent<BatAnimator>();
         
         InputManager.Instance.PushActiveContext("Gameplay");
-        InputManager.Instance.AddCallback(0, HandleBatActions);
+        InputManager.Instance.AddCallback(1, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;
 
@@ -59,7 +59,7 @@ public class BatController : MonoBehaviour {
             
             if (isInInteractionRange && interactiveElement != null) {
                 
-                //interactiveElement.activate();
+                interactiveElement.GetComponent<Switch>().Activate();
 
                 batAnimator.Shout();
             }

@@ -6,15 +6,6 @@ public class Door : Activatable
     public float FinalHeight = 15f;
     public float AnimationDuration = 1f;
 
-    // Only for testing without the switchs
-    void Update()
-    {
-        if (Time.time >= 1f)
-        {
-            Activate();
-        }
-    }
-
     protected override void ActivateAnimation()
     {
         StartCoroutine(SlideDoor());
