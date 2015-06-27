@@ -5,6 +5,10 @@ using InputHandler;
 [RequireComponent(typeof(BatAnimator))]
 public class BatController : MonoBehaviour {
 
+    public enum PlayerIndex	{Player1, Player2};
+
+    public PlayerIndex player;
+
     public float maxVelocity;
     private float minVelocity;
     private float velocityX = 0f;
@@ -13,8 +17,8 @@ public class BatController : MonoBehaviour {
     public float minMovementRange;
     public float minVelocityRange;
 
-    public bool isInInteractionRange;
-    public GameObject interactiveElement;
+    private bool isInInteractionRange;
+    private GameObject interactiveElement;
 
     private Collider2D actionCollider;
 
@@ -26,7 +30,7 @@ public class BatController : MonoBehaviour {
         batAnimator = GetComponent<BatAnimator>();
         
         InputManager.Instance.PushActiveContext("Gameplay");
-        InputManager.Instance.AddCallback(1, HandleBatActions);
+        InputManager.Instance.AddCallback((int)player, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;
 
