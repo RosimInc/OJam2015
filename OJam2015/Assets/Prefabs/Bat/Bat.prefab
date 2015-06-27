@@ -328,8 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c09b615b4265e448603ecb8d26d03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 10
-  MaxVelocity: 10
+  maxVelocity: .699999988
+  velocityFactor: 2
+  minMovementRange: .0900000036
+  minVelocityRange: .100000001
 --- !u!114 &11496094
 MonoBehaviour:
   m_ObjectHideFlags: 1
