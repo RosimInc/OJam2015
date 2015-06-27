@@ -16,7 +16,7 @@ Platform assembly: C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Manag
 Loading C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
 Platform assembly: C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Managed\XInputDotNetPure.dll (this message is harmless)
 Loading C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
-- Completed reload, in  0.439 seconds
+- Completed reload, in  0.468 seconds
 desktop: 1920x1080 59Hz; virtual: 4320x1946 at -2400,-866
 <RI> Initializing input.
 <RI> Input initialized.
@@ -33,5 +33,5 @@ GamePad Two is ready
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2e00 -> priority: 1 
-  Thread -> id: 1734 -> priority: 1 
+  Thread -> id: 2e20 -> priority: 1 
+  Thread -> id: 3614 -> priority: 1 
