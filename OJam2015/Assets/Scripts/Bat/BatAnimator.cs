@@ -5,25 +5,38 @@ public class BatAnimator : MonoBehaviour {
 
     public Transform leftWing;
     public Transform rightWing;
+    public GameObject mouth;
+
     public float rotationSpeed = 3.5f;
     public float maxRotationAngle = 50f;
     public float minRotationAngle = -50f;
-
     float ratio = 0f;
+
+    public float mouthMaxOpenTime;
+    private float mouthOpenTime = 0f;
 
 	// Use this for initialization
 	void Start () {
-    
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        flapWings();
+        FlapWings();
+
+        // decrease active time for mouth
+        if(mouthOpenTime > 0f){
+            mouthOpenTime = Mathf.Clamp( mouthOpenTime - 0.1f, 0f, mouthMaxOpenTime);
+        }
+
+        if (mouthOpenTime <= 0f) {
+            mouth.SetActive(false);
+        }
 
 	}
 
-    void flapWings() {
+    public void FlapWings() {
 
         //float rotation = Mathf.Clamp( rotationSpeed * Time.deltaTime, minRotationAngle, maxRotationAngle );
 
@@ -53,5 +66,12 @@ public class BatAnimator : MonoBehaviour {
         //rightWing.localEulerAngles = new Vector3(rightWing.localEulerAngles.x, rightWing.localEulerAngles.y, rightWing.localRotation.z + 20);
 
 
+    }
+
+    public void Shout() {
+        if( mouthOpenTime <= 0f){
+            mouth.SetActive(true);
+            mouthOpenTime = mouthMaxOpenTime;
+        }
     }
 }
