@@ -14,7 +14,7 @@ public class BatController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InputManager.Instance.PushActiveContext("Gameplay");
-        InputManager.Instance.AddCallback(0, HandleBatActions);
+        InputManager.Instance.AddCallback(1, HandleBatActions);
 	}
 
     private void HandleBatActions(MappedInput input) {
@@ -37,15 +37,9 @@ public class BatController : MonoBehaviour {
                 transform.position.y + Time.deltaTime * range * MaxSpeed,
                 0f
             );
-
             
         }
-
-        
-        
-
-
-        
+ 
     }
 	
 }
