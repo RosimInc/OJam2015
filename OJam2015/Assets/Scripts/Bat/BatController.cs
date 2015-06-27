@@ -56,7 +56,7 @@ public class BatController : MonoBehaviour {
         
 
         if (input.Actions.Contains("Action")) {
-            Debug.Log(isInInteractionRange + ", " + interactiveElement);
+            
             if (isInInteractionRange && interactiveElement != null) {
                 
                 //interactiveElement.activate();
