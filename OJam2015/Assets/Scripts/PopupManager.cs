@@ -28,6 +28,9 @@ public class PopupManager : MonoBehaviour
             _instance = this;
 
             _rectTransform = Popup.GetComponent<RectTransform>();
+
+            _rectTransform.anchorMin = new Vector2(1.05f, _rectTransform.anchorMin.y);
+            _rectTransform.anchorMax = new Vector2(1.3754727f, _rectTransform.anchorMax.y);
         }
     }
 
@@ -43,8 +46,12 @@ public class PopupManager : MonoBehaviour
 
     private IEnumerator ShowPopupCoroutine()
     {
-        Vector3 _initialPosition = _rectTransform.localPosition;
-        Vector3 _finalPosition = _initialPosition - new Vector3(1f, 0f, 0f) * 180;
+        Vector2 _initialMinPosition = new Vector2(1.05f, _rectTransform.anchorMin.y);
+        Vector2 _finalMinPosition = new Vector2(0.6525273f, _rectTransform.anchorMin.y);
+
+        Vector2 _initialMaxPosition = new Vector2(1.3754727f, _rectTransform.anchorMax.y);
+        Vector2 _finalMaxPosition = new Vector2(0.978f, _rectTransform.anchorMax.y);
+        
 
         float ratio = 0f;
 
@@ -52,7 +59,8 @@ public class PopupManager : MonoBehaviour
         {
             ratio += Time.unscaledDeltaTime / 0.5f;
 
-            _rectTransform.localPosition = Vector3.Lerp(_initialPosition, _finalPosition, ratio);
+            _rectTransform.anchorMin = Vector2.Lerp(_initialMinPosition, _finalMinPosition, ratio);
+            _rectTransform.anchorMax = Vector2.Lerp(_initialMaxPosition, _finalMaxPosition, ratio);
 
             yield return null;
         }
@@ -74,7 +82,8 @@ public class PopupManager : MonoBehaviour
         {
             ratio += Time.unscaledDeltaTime / 0.5f;
 
-            _rectTransform.localPosition = Vector3.Lerp(_finalPosition, _initialPosition, ratio);
+            _rectTransform.anchorMin = Vector2.Lerp(_finalMinPosition, _initialMinPosition, ratio);
+            _rectTransform.anchorMax = Vector2.Lerp(_finalMaxPosition, _initialMaxPosition, ratio);
 
             yield return null;
         }
