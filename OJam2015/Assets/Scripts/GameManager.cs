@@ -100,6 +100,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoseFromFall()
+    {
+        if (!_lost)
+        {
+            MenusManager.Instance.ShowMenu("LoseFallMenu");
+            BrainCloudManager.Instance.AddAchievement(BrainCloudManager.AchievementTypes.Parachute);
+            _lost = true;
+        }
+    }
+
     private void HandleMenuInput(MappedInput input)
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");

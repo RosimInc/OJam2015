@@ -12,6 +12,8 @@ public class VampireController : MonoBehaviour
 
     private VampireAnimator _vampireAnimator;
     private Vampire _vampire;
+    private bool _hasMoved = false;
+    private bool _gotAchievementAlready = false;
 
     private bool _jumpAlreadyPressed = false;
 
@@ -28,6 +30,19 @@ public class VampireController : MonoBehaviour
         InputManager.Instance.AddCallback((int)player, HandleVampireActions);
 	}
 
+    void Update()
+    {
+        if (!_hasMoved && SugarBar.Instance.GetRemainingSeconds() <= 0f && !_gotAchievementAlready)
+        {
+            if (BrainCloudManager.Instance != null)
+            {
+                BrainCloudManager.Instance.AddAchievement(BrainCloudManager.AchievementTypes.AFK);
+            }
+
+            _gotAchievementAlready = true;
+        }
+    }
+
     private void HandleVampireActions(MappedInput input)
     {
         if (this == null) return; //Bad hotfix code, should be fixed
@@ -38,9 +53,20 @@ public class VampireController : MonoBehaviour
 
             _vampireAnimator.Move(xAxisValue);
             _vampire.Move(xAxisValue);
+
+            if (xAxisValue != 0)
+            {
+                _hasMoved = true;
+            }
         }
 
         bool jumpPressed = input.States.Contains("Jump");
+
+        if (jumpPressed)
+        {
+            _hasMoved = true;
+        }
+
         bool isGrounded = _vampire.IsGrounded();
 
         if (jumpPressed && !_jumpAlreadyPressed && isGrounded)
