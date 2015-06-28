@@ -46,7 +46,7 @@ GameObject:
   - 61: {fileID: 6194464}
   m_Layer: 0
   m_Name: Waterfall
-  m_TagString: Untagged
+  m_TagString: VampireDanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterVeil: {fileID: 150416}
   WaterShader: {fileID: 11494886}
+  activated: 1
 --- !u!114 &11494886
 MonoBehaviour:
   m_ObjectHideFlags: 1
