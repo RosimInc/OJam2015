@@ -11,8 +11,8 @@ public class Switch : MonoBehaviour
    
     public void Activate()
     {
-        switchOff.SetActive(false);
-        switchOn.SetActive(true);
+        switchOff.SetActive(!switchOff.activeSelf);
+        switchOn.SetActive(!switchOn.activeSelf);
 
         Activatable.Activate();
     
