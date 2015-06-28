@@ -20,7 +20,7 @@ Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Da
 Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
 Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Data\Managed\XInputDotNetPure.dll (this message is harmless)
 Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
+- Completed reload, in  0.044 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -37,22 +37,18 @@ GamePad Two is ready
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: c80 -> priority: 1 
-Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":170,"server_time":1435518539497,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"4n7j8npr5btab81j80td1eg4ad","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
+  Thread -> id: 278 -> priority: 1 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.529018 ms
+UnloadTime: 0.293588 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1727.
-Total: 0.719041 ms (FindLiveObjects: 0.062200 ms CreateObjectMapping: 0.044473 ms MarkObjects: 0.589975 ms  DeleteObjects: 0.021770 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1617.
+Total: 0.609568 ms (FindLiveObjects: 0.059401 ms CreateObjectMapping: 0.051004 ms MarkObjects: 0.479257 ms  DeleteObjects: 0.019282 ms)
 
-[{"id":"ACH05"}
+Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":175,"server_time":1435519486847,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"j9kjn3ari3e167btj3l8sbakdi","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+[{"id":"ACH02"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -60,27 +56,11 @@ Total: 0.719041 ms (FindLiveObjects: 0.062200 ms CreateObjectMapping: 0.044473 m
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-id : ACH05
+id : ACH02
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-[{"id":"ACH01"}
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-id : ACH01
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -89,7 +69,7 @@ InvalidCastException: Cannot cast from source type to destination type.
   at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
   at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
   at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
-Rethrow as Exception: User callback handlers threw 2 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
   at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
   at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
   at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
@@ -98,8 +78,8 @@ Rethrow as Exception: User callback handlers threw 2 exception(s). See the Unity
 (Filename:  Line: -1)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.088704 ms
+UnloadTime: 1.860427 ms
 
-Unloading 82 unused Assets to reduce memory usage. Loaded Objects now: 960.
-Total: 0.896625 ms (FindLiveObjects: 0.069975 ms CreateObjectMapping: 0.038253 ms MarkObjects: 0.655907 ms  DeleteObjects: 0.131865 ms)
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 845.
+Total: 1.286624 ms (FindLiveObjects: 0.055047 ms CreateObjectMapping: 0.061889 ms MarkObjects: 0.957893 ms  DeleteObjects: 0.210860 ms)
 
