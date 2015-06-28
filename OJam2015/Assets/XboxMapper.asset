@@ -35,9 +35,9 @@ MonoBehaviour:
     - name: Cancel
       Button: 1
     AxisRanges:
-    - name: MoveHorizontal
+    - name: MoveHorizontalMenu
       Axis: 0
-    - name: MoveVertical
+    - name: MoveVerticalMenu
       Axis: 1
     ButtonStates:
     - name: Jump

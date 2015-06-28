@@ -28,7 +28,8 @@ public class BatController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         batAnimator = GetComponent<BatAnimator>();
-        
+
+        InputManager.Instance.PushActiveContext("Gameplay");
         InputManager.Instance.AddCallback((int)player, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;
@@ -43,12 +44,14 @@ public class BatController : MonoBehaviour {
         if( other.tag == "BatInteraction"){
             isInInteractionRange = true;
             interactiveElement = other.gameObject;
+            interactiveElement.GetComponent<Switch>().ShowAction();
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.tag == "BatInteraction") {
             isInInteractionRange = false;
+            interactiveElement.GetComponent<Switch>().HideAction();
             interactiveElement = null;
         }
     }

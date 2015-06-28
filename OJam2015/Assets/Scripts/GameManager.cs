@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         get { return _isPaused; }
     }
 
+    private bool _lost = false;
+
     void Awake()
     {
         if (_instance)
@@ -79,21 +81,31 @@ public class GameManager : MonoBehaviour
     {
         MenusManager.Instance.OnMenusOpened += OnMenusOpened;
         MenusManager.Instance.OnMenusClosed += OnMenusClosed;
-        InputManager.Instance.AddCallback(0, HandeMenuInput);
+        InputManager.Instance.AddCallback(0, HandleMenuInput);
         InputManager.Instance.AddCallback(0, HandleGameplayInput);
 
         if (_levelIndex == 0)
         {
             MenusManager.Instance.ShowMenu("MainMenu");
+            MusicManager.Instance.PlayMainMenuMusic();
         }
     }
 
-    private void HandeMenuInput(MappedInput input)
+    void Update()
+    {
+        if (SugarBar.Instance != null && SugarBar.Instance.GetRemainingSeconds() <= 0f && !_lost)
+        {
+            _lost = true;
+            MenusManager.Instance.ShowMenu("LoseCandyMenu");
+        }
+    }
+
+    private void HandleMenuInput(MappedInput input)
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");
         bool backButonPressed = input.Actions.Contains("Cancel");
-        float horizontalAxis = !input.Ranges.ContainsKey("MoveHorizontal") ? 0f : input.Ranges["MoveHorizontal"];
-        float verticalAxis = !input.Ranges.ContainsKey("MoveVertical") ? 0f : input.Ranges["MoveVertical"];
+        float horizontalAxis = !input.Ranges.ContainsKey("MoveHorizontalMenu") ? 0f : input.Ranges["MoveHorizontalMenu"];
+        float verticalAxis = !input.Ranges.ContainsKey("MoveVerticalMenu") ? 0f : input.Ranges["MoveVerticalMenu"];
 
         MenusManager.Instance.SetInputValues(acceptButtonPressed, backButonPressed, horizontalAxis, verticalAxis);
     }
@@ -152,11 +164,14 @@ public class GameManager : MonoBehaviour
 
     void OnLevelWasLoaded(int levelIndex)
     {
+        _lost = false;
+
         InputManager.Instance.ClearContexts();
 
         if (levelIndex >= FIRST_PLAYABLE_LEVEL_INDEX)
         {
             InputManager.Instance.PushActiveContext("Gameplay");
+            MusicManager.Instance.PlayGameplayMusic();
         }
 
         _levelIndex = levelIndex;
@@ -166,6 +181,7 @@ public class GameManager : MonoBehaviour
         if (_levelIndex == 0)
         {
             MenusManager.Instance.ShowMenu("MainMenu");
+            MusicManager.Instance.PlayMainMenuMusic();
         }
         
         StartCoroutine("FadeOut");
