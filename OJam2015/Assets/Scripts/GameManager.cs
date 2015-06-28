@@ -85,6 +85,15 @@ public class GameManager : MonoBehaviour
         if (_levelIndex == 0)
         {
             MenusManager.Instance.ShowMenu("MainMenu");
+            MusicManager.Instance.PlayMainMenuMusic();
+        }
+    }
+
+    void Update()
+    {
+        if (SugarBar.Instance != null && SugarBar.Instance.GetRemainingSeconds() <= 0f)
+        {
+            MenusManager.Instance.ShowMenu("LoseCandyMenu");
         }
     }
 
@@ -157,6 +166,7 @@ public class GameManager : MonoBehaviour
         if (levelIndex >= FIRST_PLAYABLE_LEVEL_INDEX)
         {
             InputManager.Instance.PushActiveContext("Gameplay");
+            MusicManager.Instance.PlayGameplayMusic();
         }
 
         _levelIndex = levelIndex;
@@ -166,6 +176,7 @@ public class GameManager : MonoBehaviour
         if (_levelIndex == 0)
         {
             MenusManager.Instance.ShowMenu("MainMenu");
+            MusicManager.Instance.PlayMainMenuMusic();
         }
         
         StartCoroutine("FadeOut");

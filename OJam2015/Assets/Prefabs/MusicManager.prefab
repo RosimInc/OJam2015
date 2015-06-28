@@ -180,7 +180,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b3f367bece933904fa5ddb6b18459b41, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: .400000006
   m_Pitch: 1
   Loop: 1
@@ -321,7 +321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenu: {fileID: 8226824}
   Gameplay: {fileID: 8286824}
-  FlappyWings: {fileID: 0}
   Candy: {fileID: 8298764}
 --- !u!1001 &100100000
 Prefab:
