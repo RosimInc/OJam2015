@@ -668,27 +668,33 @@ namespace BrainCloud
             string achievementsStr = "[";
             for (int i = 0, isize = ids.Length; i < isize; ++i)
             {
-                achievementsStr += (i == 0 ? "\"" : ",\"");
+                achievementsStr += (i == 0 ? "" : ",");
                 achievementsStr += ids[i];
-                achievementsStr += "\"";
+                //achievementsStr += ((i == isize - 1 || ids[i] == "}" || ids[i] == ",") ? "" : "\"");
 
 				UnityEngine.Debug.Log(achievementsStr);
             }
 
-			
-
             achievementsStr += "]";
-			UnityEngine.Debug.Log(achievementsStr);
-			object[] list = JsonReader.Deserialize<object[]>(achievementsStr);
 
-			UnityEngine.Debug.Log(list);
+			object[] array = JsonReader.Deserialize<object[]>(achievementsStr);
 
-            List<object> achievementData = JsonReader.Deserialize<List<object>>(achievementsStr);
-
-			UnityEngine.Debug.Log(achievementData);
+            UnityEngine.Debug.Log(array.Length);
 
             Dictionary<string, object> data = new Dictionary<string, object>();
-            data[OperationParam.GamificationServiceAchievementsName.Value] = achievementData;
+
+            List<string> achievs = new List<string>();
+
+            foreach (object abc in array)
+            {
+                foreach (KeyValuePair<string, object> kvp in (Dictionary<string, object>)abc)
+                {
+                    UnityEngine.Debug.Log(kvp.Key + " : " + kvp.Value);
+                    achievs.Add((string)kvp.Value);
+                }
+            }
+
+            data[OperationParam.GamificationServiceAchievementsName.Value] = achievs;
 
             SuccessCallback successCallbacks = (SuccessCallback) AchievementAwardedSuccessCallback;
             if (in_success != null)
@@ -705,12 +711,16 @@ namespace BrainCloud
             Dictionary<string, object> response = JsonReader.Deserialize<Dictionary<string, object>> (in_data);
             try
             {
-                Dictionary<string, object> data = (Dictionary<string, object>) response[OperationParam.GamificationServiceAchievementsData.Value];
-                List<string> achievements = (List<string>) data[OperationParam.GamificationServiceAchievementsName.Value];
+                Dictionary<string, object> data = (Dictionary<string, object>)response[OperationParam.GamificationServiceAchievementsData.Value];
+                Dictionary<string, object>[] achievements = (Dictionary<string, object>[])data[OperationParam.GamificationServiceAchievementsName.Value];
 
-                for (int i = 0; i < achievements.Count; i++)
+                for (int i = 0; i < achievements.Length; i++)
                 {
-                    AwardThirdPartyAchievements(achievements[i]);
+                    if (((string)achievements[i]["status"]).ToUpper() == "AWARDED")
+                    {
+                        AwardThirdPartyAchievements((string)achievements[i]["id"]);
+                        UnityEngine.Debug.Log("Achievement " + (string)achievements[i]["id"] + " unlocked!!!");
+                    }
                 }
 
                 if (m_achievementsDelegate != null)
