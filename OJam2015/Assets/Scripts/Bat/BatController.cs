@@ -28,7 +28,8 @@ public class BatController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         batAnimator = GetComponent<BatAnimator>();
-        
+
+        InputManager.Instance.PushActiveContext("Gameplay");
         InputManager.Instance.AddCallback((int)player, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;

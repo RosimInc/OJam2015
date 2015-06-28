@@ -24,6 +24,7 @@ public class VampireController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        InputManager.Instance.PushActiveContext("Gameplay");
         InputManager.Instance.AddCallback((int)player, HandleVampireActions);
 	}
 

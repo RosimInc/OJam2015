@@ -5,7 +5,6 @@ public class MusicManager : MonoBehaviour
 {
     public AudioSource MainMenu;
     public AudioSource Gameplay;
-    public AudioSource FlappyWings;
     public AudioSource Candy;
 
     public static MusicManager Instance
@@ -29,6 +28,11 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMainMenuMusic()
     {
+        if (Gameplay.isPlaying)
+        {
+            Gameplay.Stop();
+        }
+
         if (!MainMenu.isPlaying)
         {
             MainMenu.Play();
@@ -37,6 +41,11 @@ public class MusicManager : MonoBehaviour
 
     public void PlayGameplayMusic()
     {
+        if (MainMenu.isPlaying)
+        {
+            MainMenu.Stop();
+        }
+
         if (!Gameplay.isPlaying)
         {
             Gameplay.Play();
