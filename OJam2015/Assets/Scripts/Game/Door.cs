@@ -1,14 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class Door : Activatable
 {
     public float FinalHeight = 15f;
     public float AnimationDuration = 1f;
 
-    protected override void ActivateAnimation()
+    private bool _activated = false;
+
+    private AudioSource _activationSound;
+
+    void Awake()
     {
-        StartCoroutine(SlideDoor());
+        _activationSound = GetComponent<AudioSource>();
+    }
+
+    public override void Activate()
+    {
+        if (!_activated)
+        {
+            _activated = true;
+
+            StartCoroutine(SlideDoor());
+        }
     }
 
     private IEnumerator SlideDoor()
@@ -24,9 +39,12 @@ public class Door : Activatable
 
             transform.localPosition = Vector3.Lerp(initialPosition, finalPosition, Mathf.Pow(ratio, 5));
 
-            Debug.Log(transform.localPosition.y);
-
             yield return null;
+        }
+
+        if (_activationSound.isPlaying)
+        {
+            _activationSound.Stop();
         }
     }
 }
