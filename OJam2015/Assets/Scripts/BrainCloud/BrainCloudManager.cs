@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using BrainCloud;
+using System;
+using JsonFx.Json;
+using System.Collections.Generic;
 
 public class BrainCloudManager : MonoBehaviour {
 
@@ -10,6 +13,8 @@ public class BrainCloudManager : MonoBehaviour {
 	public bool login, achieve;
 
     private static BrainCloudManager _instance;
+
+    private Action<bool[]> _registeredCallback;
 
     public static BrainCloudManager Instance
     {
@@ -168,6 +173,51 @@ public class BrainCloudManager : MonoBehaviour {
             // Press B to activate a switch
 
             PopupManager.Instance.ShowPopup("I Have Read And Accept The Terms And Conditions", "Press B to activate a switch");
+        }
+    }
+
+    public void GetUnlockedAchievements(Action<bool[]> callback)
+    {
+        BrainCloudClient bcc = BrainCloudWrapper.GetBC();
+		BrainCloudGamification bcg = bcc.GetGamificationService();
+
+        _registeredCallback = callback;
+
+        bcg.ReadAchievements(false, ReadCallback, null, null);
+    }
+
+    private void ReadCallback(string in_data, object cbObject)
+    {
+        Debug.Log("READ ACHIEVEMENTS: " + in_data);
+
+        Dictionary<string, object> response = JsonReader.Deserialize<Dictionary<string, object>>(in_data);
+
+        Dictionary<string, object> data = (Dictionary<string, object>)response[OperationParam.GamificationServiceAchievementsData.Value];
+        Dictionary<string, object>[] achievements = (Dictionary<string, object>[])data[OperationParam.GamificationServiceAchievementsName.Value];
+
+        bool[] array = new bool[5];
+
+        for (int i = 0; i < achievements.Length; i++)
+        {
+            int index = int.Parse(((string)achievements[i]["id"]).Substring(4, 1)) - 1;
+
+            if (index < 5)
+	        {
+		        if (((string)achievements[i]["status"]).ToUpper() == "AWARDED")
+                {
+                    array[index] = true;
+                }
+                else
+                {
+                    array[index] = false;
+                }
+	        }
+        }
+
+        if (_registeredCallback != null)
+        {
+            _registeredCallback(array);
+            _registeredCallback = null;
         }
     }
 }
