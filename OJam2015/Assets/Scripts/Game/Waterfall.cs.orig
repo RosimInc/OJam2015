@@ -1,0 +1,79 @@
+﻿using UnityEngine;
+using System.Collections;
+using System;
+
+[RequireComponent(typeof(AudioSource))]
+public class Waterfall : Activatable
+{
+    public GameObject WaterVeil;
+    public WaterfallShader WaterShader;
+
+    public bool activated = true;
+
+    private AudioSource _waterSound;
+    private Collider2D _collider;
+
+    void Awake()
+    {
+        _waterSound = GetComponent<AudioSource>();
+        _collider = GetComponent<Collider2D>();
+    }
+
+<<<<<<< HEAD
+    public override void Activate(Action callback)
+    {
+        if (!_activated)
+=======
+    void Start()
+    {
+        if (!activated)
+        {
+            activated = !activated;
+            Activate();
+        }
+    }
+
+
+    public override void Activate()
+    {
+        activated = !activated;
+
+        if (activated && !_waterSound.isPlaying)
+>>>>>>> 0e1826470f3484245eb0e140c8cf7631f2c9582d
+        {
+            WaterShader.StartFountain(() => AfterAnimation(callback));
+            _waterSound.Play();
+        }
+<<<<<<< HEAD
+        else if (_activated)
+        {
+            WaterShader.StopFountain(() => AfterAnimation(callback));
+        }
+    }
+
+    private void AfterAnimation(Action callback)
+    {
+        if (_activated)
+=======
+        else if (!activated && _waterSound.isPlaying)
+>>>>>>> 0e1826470f3484245eb0e140c8cf7631f2c9582d
+        {
+            _waterSound.Stop();
+        }
+
+<<<<<<< HEAD
+        _activated = !_activated;
+
+        _collider.enabled = _activated;
+
+        if (callback != null)
+        {
+            callback();
+        }
+=======
+        _collider.enabled = activated;
+
+        WaterVeil.SetActive(activated);
+>>>>>>> 0e1826470f3484245eb0e140c8cf7631f2c9582d
+    }
+}

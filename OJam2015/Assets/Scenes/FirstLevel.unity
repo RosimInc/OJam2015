@@ -536,10 +536,6 @@ Prefab:
       propertyPath: Activatable
       value: 
       objectReference: {fileID: 1452961496}
-    - target: {fileID: 128192, guid: d366d970a6fa4ed448adfc907627f29e, type: 2}
-      propertyPath: m_Name
-      value: Switch
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d366d970a6fa4ed448adfc907627f29e, type: 2}
   m_IsPrefabParent: 0

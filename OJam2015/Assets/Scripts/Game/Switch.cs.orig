@@ -8,11 +8,14 @@ public class Switch : MonoBehaviour
     
     public Activatable Activatable;
 
+<<<<<<< HEAD
     private bool _animating = false;
+=======
 
     public GameObject actionButton;
     private bool activated = false;
 
+>>>>>>> 0e1826470f3484245eb0e140c8cf7631f2c9582d
    
     public void Activate()
     {
@@ -21,12 +24,19 @@ public class Switch : MonoBehaviour
             switchOff.SetActive(!switchOff.activeSelf);
             switchOn.SetActive(!switchOn.activeSelf);
 
+<<<<<<< HEAD
             _animating = true;
             Activatable.Activate(() => { _animating = false; });
-
-			activated = true;
         }
+=======
+        Activatable.Activate();
+
+        activated = true;
+    
+>>>>>>> 0e1826470f3484245eb0e140c8cf7631f2c9582d
     }
+
+
 
     public void ShowAction() {
         actionButton.SetActive(true);
