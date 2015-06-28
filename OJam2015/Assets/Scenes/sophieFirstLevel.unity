@@ -1282,6 +1282,10 @@ Prefab:
       propertyPath: batty
       value: 
       objectReference: {fileID: 1112379615}
+    - target: {fileID: 10808552, guid: 3c19ceada329f104fba6153ce381345a, type: 2}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c19ceada329f104fba6153ce381345a, type: 2}
   m_IsPrefabParent: 0
