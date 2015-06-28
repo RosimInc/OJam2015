@@ -47,10 +47,10 @@ public class PopupManager : MonoBehaviour
     private IEnumerator ShowPopupCoroutine()
     {
         Vector2 _initialMinPosition = new Vector2(1.05f, _rectTransform.anchorMin.y);
-        Vector2 _finalMinPosition = new Vector2(0.6525273f, _rectTransform.anchorMin.y);
+        Vector2 _finalMinPosition = new Vector2(0.5f, _rectTransform.anchorMin.y);
 
         Vector2 _initialMaxPosition = new Vector2(1.3754727f, _rectTransform.anchorMax.y);
-        Vector2 _finalMaxPosition = new Vector2(0.978f, _rectTransform.anchorMax.y);
+        Vector2 _finalMaxPosition = new Vector2(0.92f, _rectTransform.anchorMax.y);
         
 
         float ratio = 0f;

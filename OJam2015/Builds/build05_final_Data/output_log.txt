@@ -1,0 +1,283 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6800 Series (ID=0x6738)
+    Vendor:   ATI
+    VRAM:     1008 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\XInputDotNetPure.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\XInputDotNetPure.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
+- Completed reload, in  0.045 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build05_final_Data\Managed\System.Xml.dll (this message is harmless)
+GamePad One is ready
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+GamePad Two is ready
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 4e0 -> priority: 1 
+Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":188,"server_time":1435526542533,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"5qtjh4i1k91e6pnndmt4gjau7p","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.295143 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1663.
+Total: 0.710333 ms (FindLiveObjects: 0.063444 ms CreateObjectMapping: 0.056913 ms MarkObjects: 0.563850 ms  DeleteObjects: 0.025502 ms)
+
+[{"id":"ACH01"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH01
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.911121 ms
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1699.
+Total: 1.387390 ms (FindLiveObjects: 0.115071 ms CreateObjectMapping: 0.093923 ms MarkObjects: 1.139519 ms  DeleteObjects: 0.038253 ms)
+
+[{"id":"ACH02"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.820929 ms
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1735.
+Total: 1.367174 ms (FindLiveObjects: 0.099521 ms CreateObjectMapping: 0.097344 ms MarkObjects: 1.132055 ms  DeleteObjects: 0.037631 ms)
+
+[{"id":"ACH02"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.882197 ms
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1735.
+Total: 1.343849 ms (FindLiveObjects: 0.091124 ms CreateObjectMapping: 0.092057 ms MarkObjects: 1.125835 ms  DeleteObjects: 0.034210 ms)
+
+[{"id":"ACH02"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.778633 ms
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1735.
+Total: 1.382413 ms (FindLiveObjects: 0.101076 ms CreateObjectMapping: 0.095167 ms MarkObjects: 1.148849 ms  DeleteObjects: 0.036698 ms)
+
+[{"id":"ACH03"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH03
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+[{"id":"ACH01"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH01
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+[{"id":"ACH05"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH05
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 1 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.057604 ms
+
+Unloading 90 unused Assets to reduce memory usage. Loaded Objects now: 881.
+Total: 1.375571 ms (FindLiveObjects: 0.051315 ms CreateObjectMapping: 0.066554 ms MarkObjects: 1.050572 ms  DeleteObjects: 0.206506 ms)
+

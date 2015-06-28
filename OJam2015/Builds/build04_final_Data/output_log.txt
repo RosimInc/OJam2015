@@ -1,0 +1,146 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6800 Series (ID=0x6738)
+    Vendor:   ATI
+    VRAM:     1008 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\XInputDotNetPure.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\XInputDotNetPure.dll (this message is harmless)
+Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
+- Completed reload, in  0.049 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\Builds\build04_final_Data\Managed\System.Xml.dll (this message is harmless)
+GamePad One is ready
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+GamePad Two is ready
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1ad0 -> priority: 1 
+Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":180,"server_time":1435522785692,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"sa169icpctjf3nb81ch4sjvkks","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.324377 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1663.
+Total: 0.687630 ms (FindLiveObjects: 0.054114 ms CreateObjectMapping: 0.056291 ms MarkObjects: 0.552654 ms  DeleteObjects: 0.023947 ms)
+
+[{"id":"ACH03"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH03
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Achievement ID not found
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+AwardThirdPartyAchievements FailedAchievement ACH03 unlocked!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Awarded! {"status":200,"data":{"achievements":[{"id":"ACH03","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Showing Spotlight popup!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"NOT_AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"NOT_AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+[{"id":"ACH01"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH01
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+[{"id":"ACH05"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH05
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Achievement ID not found
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+AwardThirdPartyAchievements FailedAchievement ACH01 unlocked!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Awarded! {"status":200,"data":{"achievements":[{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Showing Deprivation popup!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"NOT_AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Achievement ID not found
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+AwardThirdPartyAchievements FailedAchievement ACH05 unlocked!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Awarded! {"status":200,"data":{"achievements":[{"id":"ACH05","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Showing AFK popup!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+

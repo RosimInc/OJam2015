@@ -22,6 +22,7 @@ public class Generator {
 				startY, 0);
 			newPlatform = GameObject.Instantiate(platform, position, Quaternion.identity) as GameObject;
 			newPlatform.transform.parent = levelHolder.transform;
+            newPlatform.GetComponent<SpriteRenderer>().sortingOrder = -10 + i % 2;
 		}
 	}
 }
