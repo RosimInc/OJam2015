@@ -20,9 +20,12 @@ public class BatController : MonoBehaviour {
     private bool isInInteractionRange;
     private GameObject interactiveElement;
 
+    private float spotlightTime = 0f;
+
     private Collider2D actionCollider;
 
-    private BatAnimator batAnimator; 
+    private BatAnimator batAnimator;
+    private bool _alreadyGotAchievement = false;
 
 
 	// Use this for initialization
@@ -37,6 +40,37 @@ public class BatController : MonoBehaviour {
         actionCollider = GetComponent<Collider2D>();
 
 	}
+
+    void Update()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(this.transform.position, 8);
+
+        bool containsVampire = false;
+
+        foreach (Collider2D col in colliders)
+        {
+            if (col.tag == "Vampire")
+            {
+                containsVampire = true;
+                break;
+            }
+        }
+
+        if (containsVampire)
+        {
+            spotlightTime += Time.deltaTime;
+        }
+        else
+        {
+            spotlightTime = 0f;
+        }
+
+        if (spotlightTime >= 15f && !_alreadyGotAchievement)
+        {
+            BrainCloudManager.Instance.AddAchievement(BrainCloudManager.AchievementTypes.Spotlight);
+            _alreadyGotAchievement = true;
+        }
+    }
 
 
     void OnTriggerEnter2D(Collider2D other) {

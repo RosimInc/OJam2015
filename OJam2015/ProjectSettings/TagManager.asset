@@ -7,6 +7,7 @@ TagManager:
   - Vampire
   - Bat
   - BatInteraction
+  - VampireDanger
   layers:
   - Default
   - TransparentFX
