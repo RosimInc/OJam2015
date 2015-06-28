@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         MenusManager.Instance.OnMenusOpened += OnMenusOpened;
         MenusManager.Instance.OnMenusClosed += OnMenusClosed;
-        InputManager.Instance.AddCallback(0, HandeMenuInput);
+        InputManager.Instance.AddCallback(0, HandleMenuInput);
         InputManager.Instance.AddCallback(0, HandleGameplayInput);
 
         if (_levelIndex == 0)
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void HandeMenuInput(MappedInput input)
+    private void HandleMenuInput(MappedInput input)
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");
         bool backButonPressed = input.Actions.Contains("Cancel");
