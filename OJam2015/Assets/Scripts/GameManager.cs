@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         get { return _isPaused; }
     }
 
+    private bool _lost = false;
+
     void Awake()
     {
         if (_instance)
@@ -91,8 +93,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (SugarBar.Instance != null && SugarBar.Instance.GetRemainingSeconds() <= 0f)
+        if (SugarBar.Instance != null && SugarBar.Instance.GetRemainingSeconds() <= 0f && !_lost)
         {
+            _lost = true;
             MenusManager.Instance.ShowMenu("LoseCandyMenu");
         }
     }
@@ -101,8 +104,8 @@ public class GameManager : MonoBehaviour
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");
         bool backButonPressed = input.Actions.Contains("Cancel");
-        float horizontalAxis = !input.Ranges.ContainsKey("MoveHorizontal") ? 0f : input.Ranges["MoveHorizontal"];
-        float verticalAxis = !input.Ranges.ContainsKey("MoveVertical") ? 0f : input.Ranges["MoveVertical"];
+        float horizontalAxis = !input.Ranges.ContainsKey("MoveHorizontalMenu") ? 0f : input.Ranges["MoveHorizontalMenu"];
+        float verticalAxis = !input.Ranges.ContainsKey("MoveVerticalMenu") ? 0f : input.Ranges["MoveVerticalMenu"];
 
         MenusManager.Instance.SetInputValues(acceptButtonPressed, backButonPressed, horizontalAxis, verticalAxis);
     }
@@ -161,6 +164,8 @@ public class GameManager : MonoBehaviour
 
     void OnLevelWasLoaded(int levelIndex)
     {
+        _lost = false;
+
         InputManager.Instance.ClearContexts();
 
         if (levelIndex >= FIRST_PLAYABLE_LEVEL_INDEX)
