@@ -671,10 +671,21 @@ namespace BrainCloud
                 achievementsStr += (i == 0 ? "\"" : ",\"");
                 achievementsStr += ids[i];
                 achievementsStr += "\"";
+
+				UnityEngine.Debug.Log(achievementsStr);
             }
+
+			
+
             achievementsStr += "]";
+			UnityEngine.Debug.Log(achievementsStr);
+			object[] list = JsonReader.Deserialize<object[]>(achievementsStr);
+
+			UnityEngine.Debug.Log(list);
 
             List<object> achievementData = JsonReader.Deserialize<List<object>>(achievementsStr);
+
+			UnityEngine.Debug.Log(achievementData);
 
             Dictionary<string, object> data = new Dictionary<string, object>();
             data[OperationParam.GamificationServiceAchievementsName.Value] = achievementData;

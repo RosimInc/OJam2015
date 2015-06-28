@@ -99,6 +99,7 @@ GameObject:
   - 92: {fileID: 728501861}
   - 124: {fileID: 728501860}
   - 81: {fileID: 728501859}
+  - 114: {fileID: 728501864}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -159,7 +160,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &728501863
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +172,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &728501864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728501858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3075bb35a4ddd4aac39fa69c9c2144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: SimonBob
+  password: yoshi
+  login: 1
+  achieve: 0
+  achievementId: ACH02
 --- !u!1 &738179357
 GameObject:
   m_ObjectHideFlags: 0
