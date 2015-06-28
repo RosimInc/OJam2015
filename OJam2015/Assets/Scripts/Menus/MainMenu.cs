@@ -9,9 +9,9 @@ public class MainMenu : Menu
         GameManager.Instance.LoadPlayableLevel(0);
     }
 
-    public void OnControlsClick()
+    public void OnAchievementsClick()
     {
-
+        MenusManager.Instance.ShowMenu("AchievementsMenu");
     }
 
     public void OnExitClick()
