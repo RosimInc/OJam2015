@@ -6,7 +6,7 @@ public class Waterfall : Activatable
 {
     public GameObject WaterVeil;
 
-    private bool _activated = false;
+    private bool _activated = true;
 
     private AudioSource _waterSound;
     private Collider2D _collider;
