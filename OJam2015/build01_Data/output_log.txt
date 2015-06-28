@@ -20,7 +20,7 @@ Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Da
 Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
 Platform assembly: C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Data\Managed\XInputDotNetPure.dll (this message is harmless)
 Loading C:\Users\Sophie\Documents\GitHub\OJam2015\OJam2015\build01_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
+- Completed reload, in  0.046 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -37,20 +37,69 @@ GamePad Two is ready
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1d1c -> priority: 1 
-Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":165,"server_time":1435517292827,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"27l5qj45fmegqkpgusligbm2k0","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
+  Thread -> id: c80 -> priority: 1 
+Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":170,"server_time":1435518539497,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"4n7j8npr5btab81j80td1eg4ad","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.335884 ms
+UnloadTime: 0.529018 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1603.
-Total: 0.734903 ms (FindLiveObjects: 0.066865 ms CreateObjectMapping: 0.055358 ms MarkObjects: 0.588109 ms  DeleteObjects: 0.023947 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1727.
+Total: 0.719041 ms (FindLiveObjects: 0.062200 ms CreateObjectMapping: 0.044473 ms MarkObjects: 0.589975 ms  DeleteObjects: 0.021770 ms)
+
+[{"id":"ACH05"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH05
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+[{"id":"ACH01"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+id : ACH01
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Logged in! {"status":200,"data":{"achievements":[{"id":"ACH04","status":"AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"NOT_AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidCastException: Cannot cast from source type to destination type.
+  at BrainCloud.BrainCloudGamification.AchievementAwardedSuccessCallback (System.String in_data, System.Object in_obj) [0x00000] in <filename unknown>:0 
+  at (wrapper delegate-invoke) BrainCloud.SuccessCallback:invoke_void__this___string_object (string,object)
+  at BrainCloud.ServerCallback.OnSuccessCallback (System.String jsonResponse) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+Rethrow as Exception: User callback handlers threw 2 exception(s). See the Unity log for callstacks or inner exception for first exception thrown.
+  at BrainCloud.Internal.BrainCloudComms.HandleResponseBundle (System.String in_jsonData) [0x00000] in <filename unknown>:0 
+  at BrainCloud.Internal.BrainCloudComms.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloud.BrainCloudClient.Update () [0x00000] in <filename unknown>:0 
+  at BrainCloudWrapper.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.125092 ms
+UnloadTime: 2.088704 ms
 
-Unloading 82 unused Assets to reduce memory usage. Loaded Objects now: 853.
-Total: 1.276983 ms (FindLiveObjects: 0.057535 ms CreateObjectMapping: 0.066243 ms MarkObjects: 0.946074 ms  DeleteObjects: 0.206817 ms)
+Unloading 82 unused Assets to reduce memory usage. Loaded Objects now: 960.
+Total: 0.896625 ms (FindLiveObjects: 0.069975 ms CreateObjectMapping: 0.038253 ms MarkObjects: 0.655907 ms  DeleteObjects: 0.131865 ms)
 
