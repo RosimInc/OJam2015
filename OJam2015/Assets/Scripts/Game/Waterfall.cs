@@ -6,7 +6,7 @@ public class Waterfall : Activatable
 {
     public GameObject WaterVeil;
 
-    private bool _activated = true;
+    public bool activated = true;
 
     private AudioSource _waterSound;
     private Collider2D _collider;
@@ -17,21 +17,31 @@ public class Waterfall : Activatable
         _collider = GetComponent<Collider2D>();
     }
 
+    void Start()
+    {
+        if (!activated)
+        {
+            activated = !activated;
+            Activate();
+        }
+    }
+
+
     public override void Activate()
     {
-        _activated = !_activated;
+        activated = !activated;
 
-        if (_activated && !_waterSound.isPlaying)
+        if (activated && !_waterSound.isPlaying)
         {
             _waterSound.Play();
         }
-        else if (!_activated && _waterSound.isPlaying)
+        else if (!activated && _waterSound.isPlaying)
         {
             _waterSound.Stop();
         }
 
-        _collider.enabled = _activated;
+        _collider.enabled = activated;
 
-        WaterVeil.SetActive(_activated);
+        WaterVeil.SetActive(activated);
     }
 }
