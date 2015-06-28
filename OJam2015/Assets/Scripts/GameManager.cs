@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
 
             MenusManager.Instance.ShowMenu("WinMenu");
             // winning achievement goes here
+            BrainCloudManager.Instance.AddAchievement(BrainCloudManager.AchievementTypes.Traitor);
             _lost = true;
         }
     }

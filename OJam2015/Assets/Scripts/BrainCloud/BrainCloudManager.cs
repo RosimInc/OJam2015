@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public class BrainCloudManager : MonoBehaviour {
 
-    public enum AchievementTypes { Deprivation, Parachute, Spotlight, Traitor, AFK, TermsAndConditions }
+    public enum AchievementTypes { Deprivation, Parachute, Spotlight, Traitor, AFK }
 
 	public string username, password;
 	public bool login, achieve;
@@ -108,9 +108,6 @@ public class BrainCloudManager : MonoBehaviour {
             case AchievementTypes.AFK:
                 achievementId = "ACH05";
                 break;
-            case AchievementTypes.TermsAndConditions:
-                achievementId = "ACH06";
-                break;
         }
 
 		BrainCloudClient bcc = BrainCloudWrapper.GetBC();
@@ -158,7 +155,7 @@ public class BrainCloudManager : MonoBehaviour {
             // Traitor
             // Refuse to activate a switch to save the boy
 
-            PopupManager.Instance.ShowPopup("Traitor", "Refuse to activate a switch to save the boy");
+            PopupManager.Instance.ShowPopup("Life sucks, doesn't it?", "Reach the ending and be disappointed by the meaning of life");
         }
         else if (response.Contains("ACH05"))
         {
@@ -166,13 +163,6 @@ public class BrainCloudManager : MonoBehaviour {
             // Die from sugar deprivation without moving
 
             PopupManager.Instance.ShowPopup("AFK", "Die from sugar deprivation without moving");
-        }
-        else if (response.Contains("ACH06"))
-        {
-            // I Have Read And Accept The Terms And Conditions
-            // Press B to activate a switch
-
-            PopupManager.Instance.ShowPopup("I Have Read And Accept The Terms And Conditions", "Press B to activate a switch");
         }
     }
 
