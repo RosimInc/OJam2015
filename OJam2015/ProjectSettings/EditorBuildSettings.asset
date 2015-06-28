@@ -6,8 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/VampireScene.unity
+    path: Assets/Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/sophieScene.unity
-  - enabled: 1
-    path: Assets/Scenes/SRLightTest.unity
+    path: Assets/Scenes/FirstLevel.unity

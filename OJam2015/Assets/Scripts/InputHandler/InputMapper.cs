@@ -40,7 +40,7 @@ namespace InputHandler
         {
             InputContext context = _contexts[name];
 
-            if (_activeContexts.Count == 0 || _activeContexts.Peek().GetType() != context.GetType())
+            if (_activeContexts.Count == 0 || _activeContexts.Peek().Name != name)
             {
                 _activeContexts.Push(context);
             }

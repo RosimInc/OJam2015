@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
 
     private bool _isLoadingScene = false;
 
-    private float _introElapsedTime = 0f;
-
     public static GameManager Instance
     {
         get
@@ -46,15 +44,6 @@ public class GameManager : MonoBehaviour
     {
         get { return _isPaused; }
     }
-
-    private bool _isInBackground;
-
-    public bool IsInBackground
-    {
-        get { return _isInBackground; }
-    }
-
-    private bool _loadingLevelSelection = false;
 
     void Awake()
     {
@@ -93,14 +82,16 @@ public class GameManager : MonoBehaviour
         InputManager.Instance.AddCallback(0, HandeMenuInput);
         InputManager.Instance.AddCallback(0, HandleGameplayInput);
 
-        InputManager.Instance.PushActiveContext("Menu");
-        MenusManager.Instance.ShowMenu("MainMenu");
+        if (_levelIndex == 0)
+        {
+            MenusManager.Instance.ShowMenu("MainMenu");
+        }
     }
 
     private void HandeMenuInput(MappedInput input)
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");
-        bool backButonPressed = input.Actions.Contains("Cance;");
+        bool backButonPressed = input.Actions.Contains("Cancel");
         float horizontalAxis = !input.Ranges.ContainsKey("MoveHorizontal") ? 0f : input.Ranges["MoveHorizontal"];
         float verticalAxis = !input.Ranges.ContainsKey("MoveVertical") ? 0f : input.Ranges["MoveVertical"];
 
@@ -114,7 +105,7 @@ public class GameManager : MonoBehaviour
             MenusManager.Instance.ShowMenu("PauseMenu");
 
             // TODO: Maybe put it in a "eat input" method in the InputMapper???
-            input.Actions.Remove("PauseMenu");
+            input.Actions.Remove("Start");
         }
     }
 
@@ -142,13 +133,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        StartCoroutine(LoadLevelCoroutine(1));
-    }
-
-    public void LoadLevelSelectionMenu()
-    {
-        _loadingLevelSelection = true;
-        StartCoroutine(LoadLevelCoroutine(1));
+        StartCoroutine(LoadLevelCoroutine(0));
     }
 
     private IEnumerator LoadLevelCoroutine(int levelIndex)
@@ -178,16 +163,9 @@ public class GameManager : MonoBehaviour
         _isLoadingScene = false;
 
         // The first level is the main menu scene, so we need to show the menu
-        if (_levelIndex == 1)
+        if (_levelIndex == 0)
         {
-            if (_loadingLevelSelection)
-            {
-                MenusManager.Instance.ShowMenu("LevelSelectionMenu");
-            }
-            else
-            {
-                MenusManager.Instance.ShowMenu("MainMenu");
-            }
+            MenusManager.Instance.ShowMenu("MainMenu");
         }
         
         StartCoroutine("FadeOut");
@@ -239,8 +217,6 @@ public class GameManager : MonoBehaviour
         }
 
         LevelTransitionImage.gameObject.SetActive(false);
-
-        _loadingLevelSelection = false;
     }
 
     public void Pause()
@@ -255,14 +231,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    void OnApplicationFocus(bool focusStatus)
-    {
-        _isInBackground = !focusStatus;
-    }
-
     private void OnMenusOpened()
     {
-        //InputManager.Instance.PushActiveContext("Menu");
+        InputManager.Instance.PushActiveContext("Menu");
     }
 
     private void OnMenusClosed()

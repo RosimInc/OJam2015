@@ -24,12 +24,13 @@ public class VampireController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        InputManager.Instance.PushActiveContext("Gameplay");
         InputManager.Instance.AddCallback((int)player, HandleVampireActions);
 	}
 
     private void HandleVampireActions(MappedInput input)
     {
+        if (this == null) return; //Bad hotfix code, should be fixed
+
         if (input.Ranges.ContainsKey("MoveHorizontal"))
         {
             float xAxisValue = input.Ranges["MoveHorizontal"];

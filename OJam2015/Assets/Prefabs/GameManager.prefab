@@ -79,6 +79,7 @@ MonoBehaviour:
   PermanentManagers:
   - {fileID: 11483988, guid: 38eb021af0911154aab92f72bc4f341a, type: 2}
   - {fileID: 11403102, guid: 98b0421919a78414a81c34439a116ab2, type: 2}
+  - {fileID: 11474274, guid: b34a07eb3002db947928802e99eae8e8, type: 2}
   LevelTransitionImage: {fileID: 11496924}
 --- !u!114 &11488558
 MonoBehaviour:
