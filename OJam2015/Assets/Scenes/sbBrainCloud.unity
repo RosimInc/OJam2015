@@ -187,7 +187,6 @@ MonoBehaviour:
   password: yoshi
   login: 1
   achieve: 0
-  achievementId: ACH02
 --- !u!1 &738179357
 GameObject:
   m_ObjectHideFlags: 0

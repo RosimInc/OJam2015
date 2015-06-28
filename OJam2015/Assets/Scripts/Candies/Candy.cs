@@ -15,6 +15,11 @@ public abstract class Candy : MonoBehaviour
     {
         if (other.tag == "Vampire")
 	    {
+            if (FindObjectOfType<LevelGenerator>() != null)
+            {
+                FindObjectOfType<LevelGenerator>().IncrementCandy();
+            }
+
             VampireAnimator animator = other.GetComponent<VampireAnimator>();
             MusicManager.Instance.PlayCandySound();
             animator.Smile();
