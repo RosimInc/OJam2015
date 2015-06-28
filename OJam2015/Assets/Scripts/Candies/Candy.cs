@@ -3,13 +3,18 @@ using System.Collections;
 using Collectibles;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class Candy : MonoBehaviour
+public class Candy : MonoBehaviour
 {
     public float SecondsValue;
+	public GameObject sprite;
 
     private CollectibleTriggerAnim _collectibleTrigger;
 
-    protected abstract void CollectCandy();
+	void Start()
+	{
+		sprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>
+			("Candy" + Random.Range(0, 9));
+	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +23,9 @@ public abstract class Candy : MonoBehaviour
             VampireAnimator animator = other.GetComponent<VampireAnimator>();
             MusicManager.Instance.PlayCandySound();
             animator.Smile();
-            CollectCandy();
+
+			// Give points here
+			SugarBar.Instance.AddCandy(SecondsValue);
 	    }
     }
 }
