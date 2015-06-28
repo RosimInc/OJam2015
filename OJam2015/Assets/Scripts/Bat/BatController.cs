@@ -29,7 +29,6 @@ public class BatController : MonoBehaviour {
 	void Start () {
         batAnimator = GetComponent<BatAnimator>();
         
-        InputManager.Instance.PushActiveContext("Gameplay");
         InputManager.Instance.AddCallback((int)player, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;
@@ -55,9 +54,9 @@ public class BatController : MonoBehaviour {
     }
 
     private void HandleBatActions(MappedInput input) {
+        if (this == null) return; //Bad hotfix code, should be fixed
 
-        Move(input);        
-        
+        Move(input);   
 
         if (input.Actions.Contains("Action")) {
             
@@ -122,8 +121,8 @@ public class BatController : MonoBehaviour {
         }
 
         transform.position = new Vector3(
-            transform.position.x + velocityX,
-            transform.position.y + velocityY,
+            transform.position.x + velocityX * Time.deltaTime * 60,
+            transform.position.y + velocityY * Time.deltaTime * 60,
             0f
         );
     }

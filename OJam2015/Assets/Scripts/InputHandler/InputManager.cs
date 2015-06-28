@@ -28,19 +28,26 @@ namespace InputHandler
 
         void Awake()
         {
-            _instance = this;
-
-            _inputMappers = new InputMapper[MAX_PLAYER_COUNT];
-
-            Dictionary<string, InputContext> mappedContexts = InputMapperAsset.GetMappedContexts();
-
-            for (int i = 0; i < MAX_PLAYER_COUNT; i++)
+            if (_instance != null)
             {
-                _inputMappers[i] = new InputMapper(mappedContexts);
+                Destroy(gameObject);
             }
+            else
+            {
+                _instance = this;
 
-            // Do the needed initial setup in the derived classes
-            InitialSetup();
+                _inputMappers = new InputMapper[MAX_PLAYER_COUNT];
+
+                Dictionary<string, InputContext> mappedContexts = InputMapperAsset.GetMappedContexts();
+
+                for (int i = 0; i < MAX_PLAYER_COUNT; i++)
+                {
+                    _inputMappers[i] = new InputMapper(mappedContexts);
+                }
+
+                // Do the needed initial setup in the derived classes
+                InitialSetup();
+            }
         }
 
         void Update()

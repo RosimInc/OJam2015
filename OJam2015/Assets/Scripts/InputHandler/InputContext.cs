@@ -11,8 +11,18 @@ namespace InputHandler
         private Dictionary<int, string> _mappedStates;
         private Dictionary<int, string> _mappedAxis;
 
+        private string _name;
+
+        public string Name
+        {
+            get { return _name; }
+        }
+        
+
         public InputContext(string contextName, InputMap inputMap)
         {
+            _name = contextName;
+
             _mappedButtons = new Dictionary<int, string>();
             _mappedStates = new Dictionary<int, string>();
             _mappedAxis = new Dictionary<int, string>();
