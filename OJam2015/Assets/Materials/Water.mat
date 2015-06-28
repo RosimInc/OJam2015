@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 21ecfb23e1b16f247a46bf0f7bcaabe6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -130,6 +130,18 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Ratio
+        second: 1
+      data:
+        first:
+          name: _InverseRatio
+        second: .5
+      data:
+        first:
+          name: _UseInverseRatio
+        second: 1
     m_Colors:
       data:
         first:
@@ -143,3 +155,23 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _CompletedColor
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _RemainingColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _WaterColorOn
+        second: {r: .439392328, g: .674648821, b: .948529422, a: .458823532}
+      data:
+        first:
+          name: _WaterColorOff
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AlphaColor
+        second: {r: 0, g: 0, b: 0, a: 0}

@@ -8,13 +8,17 @@ public class Switch : MonoBehaviour
     
     public Activatable Activatable;
 
+    private bool _animating = false;
    
     public void Activate()
     {
-        switchOff.SetActive(!switchOff.activeSelf);
-        switchOn.SetActive(!switchOn.activeSelf);
+        if (!_animating)
+        {
+            switchOff.SetActive(!switchOff.activeSelf);
+            switchOn.SetActive(!switchOn.activeSelf);
 
-        Activatable.Activate();
-    
+            _animating = true;
+            Activatable.Activate(() => { _animating = false; });
+        }
     }
 }

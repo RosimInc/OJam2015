@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413202}
   - 212: {fileID: 21264022}
+  - 114: {fileID: 11494886}
   m_Layer: 0
   m_Name: Water Veil
   m_TagString: Untagged
@@ -240,6 +241,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaterVeil: {fileID: 150416}
+  WaterShader: {fileID: 11494886}
+--- !u!114 &11494886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10301cd68bcb3764797177a8a6f37185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21216734
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -302,7 +315,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7e2129955ad936a4998eee31f41e7aa5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
