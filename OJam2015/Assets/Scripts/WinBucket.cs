@@ -14,7 +14,7 @@ public class WinBucket : MonoBehaviour {
 
             gameObject.SetActive(false);
 
-            GameManager.Instance.LoadMainMenu();
+            GameManager.Instance.Win();
 
         }
     }

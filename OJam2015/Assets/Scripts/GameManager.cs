@@ -110,6 +110,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Win() {
+
+        if (!_lost) {
+
+            MenusManager.Instance.ShowMenu("WinMenu");
+            // winning achievement goes here
+            BrainCloudManager.Instance.AddAchievement(BrainCloudManager.AchievementTypes.Traitor);
+            _lost = true;
+        }
+    }
+
     private void HandleMenuInput(MappedInput input)
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");

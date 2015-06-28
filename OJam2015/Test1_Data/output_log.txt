@@ -16,7 +16,7 @@ Platform assembly: C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Manag
 Loading C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
 Platform assembly: C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Managed\XInputDotNetPure.dll (this message is harmless)
 Loading C:\Users\Patrice\Documents\OJam2015\OJam2015\Test1_Data\Managed\XInputDotNetPure.dll into Unity Child Domain
-- Completed reload, in  0.419 seconds
+- Completed reload, in  0.459 seconds
 desktop: 1920x1080 59Hz; virtual: 4320x1946 at -2400,-866
 <RI> Initializing input.
 <RI> Input initialized.
@@ -33,293 +33,45 @@ GamePad Two is ready
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1e74 -> priority: 1 
-  Thread -> id: 2c08 -> priority: 1 
--2.01
+  Thread -> id: 3584 -> priority: 1 
+  Thread -> id: 4e1c -> priority: 1 
+Logged in! {"status":200,"data":{"vcPurchased":0,"xpCapped":false,"experiencePoints":0,"sent_events":[],"playerSessionExpiry":1200,"playerName":"","vcClaimed":0,"rewards":{"rewardDetails":{},"rewards":{},"currency":{}},"loginCount":143,"server_time":1435513601885,"experienceLevel":0,"incoming_events":[],"currency":{},"statistics":{},"abTestingId":6,"id":"6a699595-23c0-4928-b069-1688754b1202","sessionId":"4otj3n94j7a4ss45f82vubb47a","profileId":"6a699595-23c0-4928-b069-1688754b1202","newUser":"false"}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009999
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009998
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009991
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009971
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009932
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009837
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009707
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009478
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
--2.009117
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--2.008517
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--2.007799
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--2.006728
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--2.005232
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--2.003089
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--2.000681
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.997376
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.993207
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.987447
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.981332
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.973793
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.964298
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.952006
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.939719
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.922365
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.904037
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.880628
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.858029
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.826129
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.793858
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.753371
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.710512
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.663437
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.606341
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.539205
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.472448
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.395738
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.307709
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.20394
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--1.105754
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--0.9850408
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--0.855718
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--0.6981077
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--0.5494303
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--0.3804932
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
--0.1866965
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-0.03821877
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-0.2403465
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-0.4883059
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-0.766354
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1.069877
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1.354976
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1.70754
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2.045927
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2.484116
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2.859936
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-3.30475
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-3.800189
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-4.355688
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-4.863087
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-5.449069
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-6.091168
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-6.834091
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-7.502542
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-8.294531
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-9.070443
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-10.00676
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-10.84821
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-11.80925
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-12.88194
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-14.05958
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-15
+READ ACHIEVEMENTS: {"status":200,"data":{"achievements":[{"id":"ACH04","status":"NOT_AWARDED"},{"id":"ACH05","status":"AWARDED"},{"id":"ACH02","status":"AWARDED"},{"id":"ACH03","status":"NOT_AWARDED"},{"id":"ACH01","status":"AWARDED"}]}}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
