@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
     {
         MenusManager.Instance.OnMenusOpened += OnMenusOpened;
         MenusManager.Instance.OnMenusClosed += OnMenusClosed;
+
         InputManager.Instance.AddCallback(0, HandleMenuInput);
         InputManager.Instance.AddCallback(0, HandleGameplayInput);
 
@@ -125,10 +126,18 @@ public class GameManager : MonoBehaviour
     {
         bool acceptButtonPressed = input.Actions.Contains("Confirm");
         bool backButonPressed = input.Actions.Contains("Cancel");
-        float horizontalAxis = !input.Ranges.ContainsKey("MoveHorizontalMenu") ? 0f : input.Ranges["MoveHorizontalMenu"];
-        float verticalAxis = !input.Ranges.ContainsKey("MoveVerticalMenu") ? 0f : input.Ranges["MoveVerticalMenu"];
+        float verticalAxis = 0f;
 
-        MenusManager.Instance.SetInputValues(acceptButtonPressed, backButonPressed, horizontalAxis, verticalAxis);
+        if (input.Ranges.ContainsKey("MoveUpMenu"))
+	    {
+            verticalAxis = input.Ranges["MoveUpMenu"];
+	    }
+        else if (input.Ranges.ContainsKey("MoveDownMenu"))
+	    {
+            verticalAxis = -input.Ranges["MoveDownMenu"];
+	    }
+
+        MenusManager.Instance.SetInputValues(acceptButtonPressed, backButonPressed, 0f, verticalAxis);
     }
 
     private void HandleGameplayInput(MappedInput input)
@@ -191,7 +200,6 @@ public class GameManager : MonoBehaviour
 
         if (levelIndex >= FIRST_PLAYABLE_LEVEL_INDEX)
         {
-            InputManager.Instance.PushActiveContext("Gameplay");
             MusicManager.Instance.PlayGameplayMusic();
         }
 
@@ -270,11 +278,17 @@ public class GameManager : MonoBehaviour
 
     private void OnMenusOpened()
     {
-        InputManager.Instance.PushActiveContext("Menu");
+        for (int i = 0; i < InputManager.Instance.MAX_PLAYER_COUNT; i++)
+        {
+            InputManager.Instance.PushActiveContext("Menu", i);
+        }
     }
 
     private void OnMenusClosed()
     {
-        InputManager.Instance.PopActiveContext();
+        for (int i = 0; i < InputManager.Instance.MAX_PLAYER_COUNT; i++)
+        {
+            InputManager.Instance.PopActiveContext(i);
+        }
     }
 }

@@ -66,24 +66,15 @@ namespace InputHandler
             _inputMappers[playerIndex].AddCallback(action);
         }
 
-        public void PushActiveContext(string name)
+        public void PushActiveContext(string name, int playerIndex)
         {
-            // For now, all input mappers are gonna have the same contexts at the same time
-
-            for (int i = 0; i < _inputMappers.Length; i++)
-            {
-                _inputMappers[i].PushActiveContext(name);
-            }
+            _inputMappers[playerIndex].PushActiveContext(name);
         }
 
-        public void PopActiveContext()
+        public void PopActiveContext(int playerIndex)
         {
-            // For now, all input mappers are gonna have the same contexts at the same time
-
-            for (int i = 0; i < _inputMappers.Length; i++)
-            {
-                _inputMappers[i].PopActiveContext();
-            }
+            // TODO: Give the choice to remove an active context not on top
+            _inputMappers[playerIndex].PopActiveContext();
         }
 
         public void ClearContexts()

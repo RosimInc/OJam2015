@@ -26,7 +26,7 @@ public class VampireController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        InputManager.Instance.PushActiveContext("Gameplay");
+        InputManager.Instance.PushActiveContext("GameplayVampire", (int)player);
         InputManager.Instance.AddCallback((int)player, HandleVampireActions);
 	}
 
@@ -47,18 +47,23 @@ public class VampireController : MonoBehaviour
     {
         if (this == null) return; //Bad hotfix code, should be fixed
 
-        if (input.Ranges.ContainsKey("MoveHorizontal"))
+        float xAxisValue = 0f;
+
+        if (input.Ranges.ContainsKey("MoveLeftVampire"))
         {
-            float xAxisValue = input.Ranges["MoveHorizontal"];
+            xAxisValue = -input.Ranges["MoveLeftVampire"];
 
-            _vampireAnimator.Move(xAxisValue);
-            _vampire.Move(xAxisValue);
-
-            if (xAxisValue != 0)
-            {
-                _hasMoved = true;
-            }
+            _hasMoved = true;
         }
+        else if (input.Ranges.ContainsKey("MoveRightVampire"))
+        {
+            xAxisValue = input.Ranges["MoveRightVampire"];
+
+            _hasMoved = true;
+        }
+
+        _vampireAnimator.Move(xAxisValue);
+        _vampire.Move(xAxisValue);
 
         bool jumpPressed = input.States.Contains("Jump");
 

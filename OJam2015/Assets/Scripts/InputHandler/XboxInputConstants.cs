@@ -28,10 +28,14 @@ namespace InputHandler
 
         public enum Axis
         {
-            LeftStickX,
-            LeftStickY,
-            RightStickX,
-            RightStickY,
+            LeftStickLeft,
+            LeftStickRight,
+            LeftStickUp,
+            LeftStickDown,
+            RightStickLeft,
+            RightStickRight,
+            RightStickUp,
+            RightStickDown,
             TriggerLeft,
             TriggerRight
         }

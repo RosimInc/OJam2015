@@ -32,7 +32,7 @@ public class BatController : MonoBehaviour {
 	void Start () {
         batAnimator = GetComponent<BatAnimator>();
 
-        InputManager.Instance.PushActiveContext("Gameplay");
+        InputManager.Instance.PushActiveContext("GameplayBat", (int)player);
         InputManager.Instance.AddCallback((int)player, HandleBatActions);
 
         minVelocity = -1 * maxVelocity;
@@ -111,50 +111,65 @@ public class BatController : MonoBehaviour {
     }
 
 
-    private void Move(MappedInput input){
-        if (input.Ranges.ContainsKey("MoveHorizontal")) {
-            float rangeX = input.Ranges["MoveHorizontal"];
+    private void Move(MappedInput input)
+    {
+        float rangeX = 0f;
 
-            if (rangeX >= minMovementRange || rangeX <= -1 * minMovementRange) {
-                
-                velocityX = Mathf.Clamp(velocityX + velocityFactor * Time.deltaTime * rangeX, minVelocity, maxVelocity);
-
-            }
-
-            // if the joystick is in the deadzone, slow down the character
-            else {
-                if (velocityX > 0) {
-                    velocityX = Mathf.Clamp(velocityX - velocityFactor * 0.5f * Time.deltaTime, 0f, maxVelocity);
-                }
-                else {
-                    velocityX = Mathf.Clamp(velocityX + velocityFactor * 0.5f * Time.deltaTime, minVelocity, 0f);
-                }
-
-            }
-
-            
+        if (input.Ranges.ContainsKey("MoveLeftBat"))
+        {
+            rangeX = -input.Ranges["MoveLeftBat"];
+        }
+        else if (input.Ranges.ContainsKey("MoveRightBat"))
+        {
+            rangeX = input.Ranges["MoveRightBat"];
         }
 
-        if (input.Ranges.ContainsKey("MoveVertical")) {
-            float rangeY = input.Ranges["MoveVertical"];
+        if (rangeX >= minMovementRange || rangeX <= -1 * minMovementRange)
+        {
 
-            if (rangeY >= minMovementRange || rangeY <= -1 * minMovementRange) {
+            velocityX = Mathf.Clamp(velocityX + velocityFactor * Time.deltaTime * rangeX, minVelocity, maxVelocity);
 
-                velocityY = Mathf.Clamp(velocityY + velocityFactor * Time.deltaTime * rangeY, minVelocity, maxVelocity);
-
+        }
+        // if the joystick is in the deadzone, slow down the character
+        else
+        {
+            if (velocityX > 0)
+            {
+                velocityX = Mathf.Clamp(velocityX - velocityFactor * 0.5f * Time.deltaTime, 0f, maxVelocity);
             }
-            // if the joystick is in the deadzone, slow down the character
-            else {
-
-                if (velocityY > 0) {
-
-                    velocityY = Mathf.Clamp(velocityY - velocityFactor *0.5f  * Time.deltaTime, 0f, maxVelocity);
-                }
-                else {
-                    velocityY = Mathf.Clamp(velocityY + velocityFactor * 0.5f * Time.deltaTime, minVelocity, 0f);
-                }
+            else
+            {
+                velocityX = Mathf.Clamp(velocityX + velocityFactor * 0.5f * Time.deltaTime, minVelocity, 0f);
             }
 
+        }
+
+        float rangeY = 0f;
+
+        if (input.Ranges.ContainsKey("MoveDownBat"))
+        {
+            rangeY = -input.Ranges["MoveDownBat"];
+        }
+        else if (input.Ranges.ContainsKey("MoveUpBat"))
+        {
+            rangeY = input.Ranges["MoveUpBat"];
+        }
+
+        if (rangeY >= minMovementRange || rangeY <= -1 * minMovementRange)
+        {
+            velocityY = Mathf.Clamp(velocityY + velocityFactor * Time.deltaTime * rangeY, minVelocity, maxVelocity);
+        }
+        // if the joystick is in the deadzone, slow down the character
+        else
+        {
+            if (velocityY > 0)
+            {
+                velocityY = Mathf.Clamp(velocityY - velocityFactor * 0.5f * Time.deltaTime, 0f, maxVelocity);
+            }
+            else
+            {
+                velocityY = Mathf.Clamp(velocityY + velocityFactor * 0.5f * Time.deltaTime, minVelocity, 0f);
+            }
         }
 
         transform.position = new Vector3(

@@ -107,16 +107,19 @@ namespace InputHandler
                 }
             }*/
 
-            string range = null;
-
-            if (_activeContexts.Count != 0)
+            if (value != 0f)
             {
-                range = _activeContexts.Peek().GetRangeForAxis(axis);
-            }
+                string range = null;
 
-            if (range != null)
-            {
-                _currentFrameMappedInput.Ranges[range] = value;
+                if (_activeContexts.Count != 0)
+                {
+                    range = _activeContexts.Peek().GetRangeForAxis(axis);
+                }
+
+                if (range != null)
+                {
+                    _currentFrameMappedInput.Ranges[range] = value;
+                }
             }
         }
 

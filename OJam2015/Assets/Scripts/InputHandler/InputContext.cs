@@ -27,19 +27,28 @@ namespace InputHandler
             _mappedStates = new Dictionary<int, string>();
             _mappedAxis = new Dictionary<int, string>();
 
-            foreach (InputToActionMap buttonToActionMap in inputMap.ButtonToActionMap)
+            foreach (List<InputToActionMap> buttonsToActionsMap in inputMap.ButtonsToActionsMap)
             {
-                _mappedButtons.Add(buttonToActionMap.input, buttonToActionMap.action);
+                foreach (InputToActionMap buttonToActionMap in buttonsToActionsMap)
+                {
+                    _mappedButtons.Add(buttonToActionMap.input, buttonToActionMap.action);
+                }
             }
 
-            foreach (InputToActionMap buttonToStateMap in inputMap.ButtonToStateMap)
+            foreach (List<InputToActionMap> buttonsToStatesMap in inputMap.ButtonsToStatesMap)
             {
-                _mappedStates.Add(buttonToStateMap.input, buttonToStateMap.action);
+                foreach (InputToActionMap buttonToStateMap in buttonsToStatesMap)
+                {
+                    _mappedStates.Add(buttonToStateMap.input, buttonToStateMap.action);
+                }
             }
 
-            foreach (InputToActionMap axisToRangeMap in inputMap.AxisToRangeMap)
+            foreach (List<InputToActionMap> axisToRangesMap in inputMap.AxisToRangesMap)
             {
-                _mappedAxis.Add(axisToRangeMap.input, axisToRangeMap.action);
+                foreach (InputToActionMap axisToRangeMap in axisToRangesMap)
+                {
+                    _mappedAxis.Add(axisToRangeMap.input, axisToRangeMap.action);
+                }
             }
         }
 

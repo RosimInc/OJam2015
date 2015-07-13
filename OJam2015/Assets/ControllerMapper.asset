@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539aad81a9327404e8e67bb53c540d91, type: 3}
+  m_Name: ControllerMapper
+  m_EditorClassIdentifier: 
+  Contexts:
+  - name: GameplayVampire
+    ButtonActions:
+    - name: Start
+      XboxButtons: 07000000
+      KeyboardKeys: 1b000000
+    AxisRanges:
+    - name: MoveLeftVampire
+      Axis: 00000000
+      KeyboardKeys: 61000000
+    - name: MoveRightVampire
+      Axis: 01000000
+      KeyboardKeys: 64000000
+    ButtonStates:
+    - name: Jump
+      XboxButtons: 00000000
+      KeyboardKeys: 20000000
+  - name: Menu
+    ButtonActions:
+    - name: Start
+      XboxButtons: 07000000
+      KeyboardKeys: 1b000000
+    - name: Confirm
+      XboxButtons: 00000000
+      KeyboardKeys: 0d000000
+    - name: Cancel
+      XboxButtons: 01000000
+      KeyboardKeys: 
+    AxisRanges:
+    - name: MoveUpMenu
+      Axis: 02000000
+      KeyboardKeys: 11010000
+    - name: MoveDownMenu
+      Axis: 03000000
+      KeyboardKeys: 12010000
+    ButtonStates: []
+  - name: GameplayBat
+    ButtonActions:
+    - name: Action
+      XboxButtons: 00000000
+      KeyboardKeys: 0d000000
+    - name: Start
+      XboxButtons: 07000000
+      KeyboardKeys: 1b000000
+    AxisRanges:
+    - name: MoveLeftBat
+      Axis: 00000000
+      KeyboardKeys: 14010000
+    - name: MoveRightBat
+      Axis: 01000000
+      KeyboardKeys: 13010000
+    - name: MoveDownBat
+      Axis: 03000000
+      KeyboardKeys: 12010000
+    - name: MoveUpBat
+      Axis: 02000000
+      KeyboardKeys: 11010000
+    ButtonStates: []

@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace InputHandler
 {
     public struct InputMap
     {
-        public InputToActionMap[] ButtonToActionMap;
-        public InputToActionMap[] ButtonToStateMap;
-        public InputToActionMap[] AxisToRangeMap;
+        public List<InputToActionMap>[] ButtonsToActionsMap;
+        public List<InputToActionMap>[] ButtonsToStatesMap;
+        public List<InputToActionMap>[] AxisToRangesMap;
     }
 
     public struct InputToActionMap
