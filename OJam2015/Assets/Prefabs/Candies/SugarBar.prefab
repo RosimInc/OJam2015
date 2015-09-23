@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6a84901d1e092428d6c1cd9e87cccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBeforeDeath: 20
+  TimeBeforeDeath: 35
 --- !u!222 &22213302
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -154,7 +154,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: TimeBeforeDeath
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 147480}

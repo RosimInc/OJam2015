@@ -2746,6 +2746,10 @@ Prefab:
       propertyPath: m_PlaneDistance
       value: 8.30000019
       objectReference: {fileID: 0}
+    - target: {fileID: 11481150, guid: d08379d83467a6542b0ddb279f586294, type: 2}
+      propertyPath: TimeBeforeDeath
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08379d83467a6542b0ddb279f586294, type: 2}
   m_IsPrefabParent: 0
@@ -2882,6 +2886,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &1307815162 stripped
 Transform:
   m_PrefabParentObject: {fileID: 476836, guid: b499e2fddc741bb4c82594c6f86abfd9, type: 2}
